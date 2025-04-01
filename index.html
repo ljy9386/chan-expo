@@ -9,7 +9,7 @@
 
 </head>
 <body class="text-gray-900 font-sans">
-  
+
   <audio id="bgm" src="bgm.mp3" autoplay loop></audio>
   <button id="bgm-toggle" class="fixed top-4 right-4 bg-white px-4 py-2 rounded shadow">
     🔈 음악 끄기
@@ -35,6 +35,15 @@
   <!-- 구름 (움직일 요소) -->
   <div class="cloud w-20 h-10 bg-white rounded-full absolute top-20 left-10 opacity-80 shadow-md"></div>
 
+  <!-- 🎞️ 슬라이드 배너 시작 -->
+<div class="relative w-full overflow-hidden h-64 sm:h-80 mb-12" id="banner">
+  <div class="flex w-[300%] animate-slide" id="banner-inner">
+    <img src="banner1.png" class="w-full object-cover flex-shrink-0" />
+    <img src="banner2.png" class="w-full object-cover flex-shrink-0" />
+    <img src="banner3.png" class="w-full object-cover flex-shrink-0" />    
+  </div>
+</div>
+
   <!-- 텍스트 영역 -->
   <main id="home" class="text-center pt-32 pb-16">
     <h1 class="text-4xl font-bold mb-2">안녕하세요!</h1>
@@ -42,14 +51,18 @@
 
     <!-- 캐릭터 -->
     <div class="mt-10 flex justify-center gap-20 flex-wrap">
+      <a href="hamster.html">
       <div class="character" onclick="toggleSpeech(this)">
-        <img src="hamster.png" class="w-36 sm:w-48" />
+        <img src="hamster.png" class="w-36 sm:w-48 transition transform hover:-translate-y-2 hover:scale-110 duration-300" />
         <div class="speech">안녕! 나는 햄찌야 🐹</div>
       </div>
+      </a>
+      <a href="rabbit.html">
       <div class="character" onclick="toggleSpeech(this)">
-        <img src="rabbit.png" class="w-36 sm:w-48" />
+        <img src="rabbit.png" class="w-36 sm:w-48 transition transform hover:-translate-y-2 hover:scale-110 duration-300" />
         <div class="speech">안녕! 나는 토끼야 🐰</div>
       </div>
+      </a>
     </div>
   </main>
 
@@ -80,6 +93,6 @@
       </div>
     </div>
   </section>
-  <script src="scipt.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
