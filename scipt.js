@@ -17,3 +17,19 @@
     }
   });
   
+  // 음악 On/Off 토글 버튼
+window.addEventListener('DOMContentLoaded', () => {
+    const bgm = document.getElementById('bgm');
+    const toggleBtn = document.getElementById('bgm-toggle');
+  
+    toggleBtn.addEventListener('click', () => {
+      if (bgm.paused) {
+        bgm.play();
+        toggleBtn.textContent = '🔈 음악 끄기';
+      } else {
+        bgm.pause();
+        toggleBtn.textContent = '🔇 음악 켜기';
+      }
+    });
+  });
+  
