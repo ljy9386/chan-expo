@@ -9,3 +9,11 @@
     const offset = window.scrollY;
     cloud.style.transform = `translateX(${offset * 0.5}px)`;
   });
+
+  window.addEventListener('click', () => {
+    const bgm = document.getElementById('bgm');
+    if (bgm.paused) {
+      bgm.play();
+    }
+  });
+  
