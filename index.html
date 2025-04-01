@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>찬이 박람회</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="style.css">
+
+</head>
+<body class="text-gray-900 font-sans">
+
+  <!-- 헤더 -->
+  <header class="flex justify-between items-center px-6 py-4 bg-transparent">
+    <div class="text-2xl font-bold">LOGO</div>
+    <nav class="space-x-6 text-lg hidden sm:block">
+      <a href="#home" class="hover:underline">홈</a>
+      <a href="#intro" class="hover:underline">소개</a>
+      <a href="#programs" class="hover:underline">프로그램</a>
+      <a href="#contact" class="hover:underline">문의</a>
+    </nav>
+    <div>
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-black" viewBox="0 0 20 20" fill="currentColor">
+        <path fill-rule="evenodd" d="M8 4a4 4 0 014 4c0 .993-.38 1.897-1 2.585l5.707 5.707-1.414 1.414L9.586 12A4 4 0 118 4zm0 2a2 2 0 100 4 2 2 0 000-4z" clip-rule="evenodd" />
+      </svg>
+    </div>
+  </header>
+
+  <!-- 구름 (움직일 요소) -->
+  <div class="cloud w-20 h-10 bg-white rounded-full absolute top-20 left-10 opacity-80 shadow-md"></div>
+
+  <!-- 텍스트 영역 -->
+  <main id="home" class="text-center pt-32 pb-16">
+    <h1 class="text-4xl font-bold mb-2">안녕하세요!</h1>
+    <p class="text-2xl">찬이 박람회에 오신 것을 환영합니다!</p>
+
+    <!-- 캐릭터 -->
+    <div class="mt-10 flex justify-center gap-20 flex-wrap">
+      <div class="character" onclick="toggleSpeech(this)">
+        <img src="hamster.png" class="w-36 sm:w-48" />
+        <div class="speech">안녕! 나는 햄찌야 🐹</div>
+      </div>
+      <div class="character" onclick="toggleSpeech(this)">
+        <img src="rabbit.png" class="w-36 sm:w-48" />
+        <div class="speech">안녕하세요~ 토끼입니다 🐰</div>
+      </div>
+    </div>
+  </main>
+
+  <!-- 소개 섹션 -->
+  <section id="intro" class="bg-white bg-opacity-80 py-16 px-4 text-center">
+    <h2 class="text-3xl font-bold mb-6">찬이 박람회란?</h2>
+    <p class="max-w-xl mx-auto text-lg leading-relaxed">
+      찬이 박람회는 귀여운 동물 친구들과 함께하는 따뜻한 커뮤니티 행사입니다.<br/>
+      가족 단위 방문자부터 친구, 연인까지 모두가 즐길 수 있어요!
+    </p>
+  </section>
+
+  <!-- 프로그램 섹션 -->
+  <section id="programs" class="bg-white bg-opacity-90 py-16 px-4">
+    <h2 class="text-3xl font-bold text-center mb-10">프로그램 소개</h2>
+    <div class="max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+      <div class="bg-white rounded-lg shadow p-6">
+        <h3 class="text-xl font-semibold mb-2">🐹 햄스터와 놀기</h3>
+        <p class="text-gray-700 text-sm">햄스터와 터널 놀이, 먹이주기 체험!</p>
+      </div>
+      <div class="bg-white rounded-lg shadow p-6">
+        <h3 class="text-xl font-semibold mb-2">🐰 토끼와 산책</h3>
+        <p class="text-gray-700 text-sm">귀여운 토끼 친구들과 꽃밭 산책!</p>
+      </div>
+      <div class="bg-white rounded-lg shadow p-6">
+        <h3 class="text-xl font-semibold mb-2">🎨 동물 그리기 체험</h3>
+        <p class="text-gray-700 text-sm">어린이 대상 동물 그림 그리기 활동.</p>
+      </div>
+    </div>
+  </section>
+  <script src="scipt.js"></script>
+</body>
+</html>
